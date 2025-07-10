@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pizza Delight</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('https://images.unsplash.com/photo-1601924582975-3c30e9d29f09?auto=format&fit=crop&w=1470&q=80')
+        center center/cover no-repeat;
+      height: 90vh;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 600;
+    }
+
+    .pizza-card img {
+      height: 220px;
+      object-fit: cover;
+      border-radius: 0.5rem 0.5rem 0 0;
+      transition: transform 0.3s ease;
+    }
+
+    .pizza-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .pizza-card .card-body {
+      transition: box-shadow 0.3s ease;
+    }
+
+    .pizza-card:hover .card-body {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-custom {
+      background-color: #ff5722;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #e64a19;
+    }
+
+    footer {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm px-4 sticky-top">
+    <a class="navbar-brand fw-bold" href="#">🍕 Pizza Delight</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav gap-2">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Cart</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero d-flex align-items-center text-center">
+    <div class="container text-white">
+      <h1 class="mb-3">Delicious Pizza, Delivered Hot</h1>
+      <p class="lead">Satisfy your cravings with fresh, oven-baked pizzas at your door.</p>
+      <a href="#" class="btn btn-lg btn-custom mt-3">🍕 Order Now</a>
+    </div>
+  </section>
+
+  <!-- Featured Pizzas -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4 fw-bold">Our Featured Pizzas</h2>
+    <div class="row g-4" id="pizzaList"></div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-light py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3">Why Choose Pizza Delight?</h2>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-3">
+          <h5>🍅 Fresh Ingredients</h5>
+          <p>Only premium, locally sourced ingredients go into our pizzas.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>⏱️ Fast Delivery</h5>
+          <p>Hot and fresh at your doorstep in 30 minutes or less.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>🔥 Wood-Fired Flavor</h5>
+          <p>Authentic Italian taste with every bite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4 fw-bold">Customer Reviews</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="bg-white p-4 border shadow-sm h-100 rounded text-center">
+          <p class="fst-italic">"The Margherita is divine. Crust perfection!"</p>
+          <p class="fw-semibold text-muted">- Alex</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-white p-4 border shadow-sm h-100 rounded text-center">
+          <p class="fst-italic">"Incredible service and delicious pizzas."</p>
+          <p class="fw-semibold text-muted">- Jamie</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-white p-4 border shadow-sm h-100 rounded text-center">
+          <p class="fst-italic">"Best crust in town. Will order again!"</p>
+          <p class="fw-semibold text-muted">- Taylor</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 Pizza Delight | Built with 🍕 & ❤️
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const pizzas = [
+      {
+        name: "Margherita",
+        price: "$8.99",
+        image: "https://images.unsplash.com/photo-1601924638867-3ec0e293c2ac?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        name: "Pepperoni Feast",
+        price: "$10.99",
+        image: "https://images.unsplash.com/photo-1585238341986-ef98cfee169f?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        name: "Veggie Supreme",
+        price: "$9.49",
+        image: "https://images.unsplash.com/photo-1594007654729-407eedc4be57?auto=format&fit=crop&w=800&q=80"
+      }
+    ];
+
+    const pizzaList = document.getElementById("pizzaList");
+
+    pizzas.forEach(pizza => {
+      const col = document.createElement("div");
+      col.className = "col-md-4";
+      col.innerHTML = `
+        <div class="card pizza-card h-100 border-0 shadow-sm">
+          <img src="${pizza.image}" class="card-img-top" alt="${pizza.name}">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">${pizza.name}</h5>
+            <p class="card-text text-success fs-5 fw-semibold">${pizza.price}</p>
+            <button class="btn btn-custom">Add to Cart</button>
+          </div>
+        </div>
+      `;
+      pizzaList.appendChild(col);
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
