@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1",
+    "name": "Margherita",
+    "description": "Classic delight with 100% real mozzarella cheese.",
+    "price": 500,
+    "image": "assets/margherita.jpg",
+    "category": "veg"
+  },
+  {
+    "id": "2",
+    "name": "Pepperoni Feast",
+    "description": "Loaded with crispy pepperoni and cheese.",
+    "price": 750,
+    "image": "assets/pepperoni.jpg",
+    "category": "meat"
+  },
+  {
+    "id": "3",
+    "name": "Veggie Lovers",
+    "description": "Topped with fresh mushrooms, onions, capsicum, and olives.",
+    "price": 650,
+    "image": "assets/veggie.jpg",
+    "category": "veg"
+  },
+  {
+    "id": "4",
+    "name": "BBQ Chicken",
+    "description": "Grilled chicken with smoky BBQ sauce and onions.",
+    "price": 800,
+    "image": "assets/bbq_chicken.jpg",
+    "category": "meat"
+  },
+  {
+    "id": "5",
+    "name": "Spicy Peri Peri",
+    "description": "Hot and spicy peri peri sauce with jalapeños and onions.",
+    "price": 700,
+    "image": "assets/peri_peri.jpg",
+    "category": "spicy"
+  },
+  {
+    "id": "6",
+    "name": "Hawaiian Delight",
+    "description": "A tropical mix of ham and pineapple.",
+    "price": 750,
+    "image": "assets/hawaiian.jpg",
+    "category": "meat"
+  },
+  {
+    "id": "7",
+    "name": "Cheese Overload",
+    "description": "For cheese lovers! Triple layers of mozzarella and cheddar.",
+    "price": 600,
+    "image": "assets/cheese_overload.jpg",
+    "category": "veg"
+  },
+  {
+    "id": "8",
+    "name": "Mexican Heat",
+    "description": "Fiery jalapeños, bell peppers, and spicy sauce.",
+    "price": 720,
+    "image": "assets/mexican_heat.jpg",
+    "category": "spicy"
+  }
+]
