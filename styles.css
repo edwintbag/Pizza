@@ -1,64 +1,53 @@
-   :root[data-theme='light'] {
-      --bg: white;
-      --text: black;
-      --card-bg: #f8f9fa;
-    }
-    :root[data-theme='dark'] {
-      --bg: #121212;
-      --text: #e0e0e0;
-      --card-bg: #1f1f1f;
-    }
-    body {
-      font-family: 'Quicksand', sans-serif;
-      scroll-behavior: smooth;
-      background-color: var(--bg);
-      color: var(--text);
-    }
+/* === Base Styling === */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
 
-    .navbar, .footer {
-      transition: background 0.3s ease;
-    }
+.hero {
+  background: linear-gradient(45deg, #ffce00, #ffa500);
+  color: #fff;
+  border-radius: 10px;
+}
 
-    .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('https://images.unsplash.com/photo-1601924582975-3c30e9d29f09?auto=format&fit=crop&w=1470&q=80')
-        center center/cover no-repeat;
-      height: 90vh;
-      color: white;
-    }
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .pizza-card img {
-      height: 220px;
-      object-fit: cover;
-      border-radius: 0.5rem 0.5rem 0 0;
-      transition: transform 0.3s ease;
-    }
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
 
-    .pizza-card:hover img {
-      transform: scale(1.05);
-    }
+/* === Dark Mode === */
+.dark-theme {
+  background-color: #1c1c1c;
+  color: #f1f1f1;
+}
 
-    .pizza-card .card-body {
-      background-color: var(--card-bg);
-      transition: box-shadow 0.3s ease;
-    }
+.dark-theme .navbar,
+.dark-theme .modal-content {
+  background-color: #2c2c2c;
+  color: #f1f1f1;
+}
 
-    .btn-custom {
-      background-color: #ff5722;
-      color: white;
-      transition: background-color 0.3s ease;
-    }
+.dark-theme .card {
+  background-color: #333;
+  border: 1px solid #444;
+  color: #fff;
+}
 
-    .btn-custom:hover {
-      background-color: #e64a19;
-    }
+.dark-theme .btn-outline-dark {
+  color: #fff;
+  border-color: #fff;
+}
 
-    footer {
-      background-color: #343a40;
-      color: white;
-      font-size: 0.9rem;
-    }
+.dark-theme .btn-outline-dark:hover {
+  background-color: #fff;
+  color: #000;
+}
 
-    .form-inline input {
-      margin-right: 10px;
-    }
+/* === Utilities === */
+#pizzaContainer .card img {
+  max-height: 150px;
+  object-fit: cover;
+}
